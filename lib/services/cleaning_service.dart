@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../model/cleaning_model.dart';
+//import '../model/cleaning_model.dart';
 
 class CleaningService {
   getCleaning() async {
@@ -38,5 +38,5 @@ void main() async {
   print(map);
 
   var clean = CleaningService().removeVal(map);
-  print(clean.toString());
+  print(clean);
 }
