@@ -42,7 +42,6 @@ class _DistanceListState extends State<DistanceList> {
               final DistanceModel pais = paises[index];
               return Column(
                 children: [
-                  const Text('Distancia Hasta Mexico'),
                   ListTile(
                     leading: const CircleAvatar(
                       backgroundColor: Colors.greenAccent,
