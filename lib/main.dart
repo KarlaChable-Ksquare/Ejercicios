@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'provider/distance_provider.dart';
 import 'provider/movie_provider.dart';
 import 'screens/cleaning_list.dart';
+import 'screens/distance_calculate.dart';
 import 'screens/movie_list.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             //primarySwatch: Colors.pink,
             ),
-        home: CleaningList(), // <== checar siempre
+        home: DistanceCalculate(), // <== checar siempre
       ),
     );
   }

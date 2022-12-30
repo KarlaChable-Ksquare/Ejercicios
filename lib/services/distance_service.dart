@@ -11,22 +11,12 @@ class DistanceService {
 
     if (response.statusCode == 200) {
       final json = jsonDecode(response.body) as List;
-      // final mexToJap = json
-      //     .where((e) => e['name'] == 'Mexico' || e['name'] == 'Japan')
-      //     .toList();
-      // print(mexToJap);
 
       final countries = json.map((e) {
         return DistanceModel.fromJson(e);
       }).toList();
       //print(countries);
       return countries;
-
-      // final mexJap = countries
-      //     .where((e) => e.name == 'Mexico' || e.name == 'Japan')
-      //     .toList();
-      // //print(mexJap);
-      // return mexJap;
     }
     return [];
   }

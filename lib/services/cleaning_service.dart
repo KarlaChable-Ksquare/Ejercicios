@@ -35,8 +35,8 @@ class CleaningService {
 
 void main() async {
   var map = await CleaningService().getCleaning();
-  print(map);
+  //print(map);
 
   var clean = CleaningService().removeVal(map);
-  print(clean);
+  //print(clean);
 }
