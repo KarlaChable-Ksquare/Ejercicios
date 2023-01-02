@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mazetv/screens/distance_list.dart';
+import 'package:mazetv/screens/pokedex.dart';
 import 'package:provider/provider.dart';
 
 import 'provider/distance_provider.dart';
 import 'provider/movie_provider.dart';
+import 'router.dart';
 import 'screens/cleaning_list.dart';
 import 'screens/distance_calculate.dart';
 import 'screens/movie_list.dart';
+import 'screens/movie_titles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => DistanceProvider(), // <== checar siempre
+          create: (context) => MovieProvider(), // <== checar siempre
         )
       ],
       child: MaterialApp(
@@ -28,7 +31,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             //primarySwatch: Colors.pink,
             ),
-        home: DistanceCalculate(), // <== checar siempre
+        onGenerateRoute: RouterGenerator().routerGenerate, // <== checar siempre
+        initialRoute: '/',
+        home: const Pokedex(),
       ),
     );
   }
